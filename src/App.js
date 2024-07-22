@@ -1,5 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { uploadQuizData } from '../utils/uploadQuizData';
+
+function AdminPage() {
+  const handleUpload = async () => {
+    await uploadQuizData();
+    alert('Quiz data uploaded successfully!');
+  };
+
+  return (
+    <div>
+      <h1>Admin Panel</h1>
+      <button onClick={handleUpload}>Upload Quiz Data</button>
+    </div>
+  );
+}
 
 function App() {
   return (
