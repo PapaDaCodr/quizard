@@ -1,0 +1,36 @@
+.topic-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .topic-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .topic-item h3 {
+    margin-top: 0;
+    color: #007bff;
+  }
+  
+  .topic-item ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .topic-item li {
+    margin: 5px 0;
+  }
+  
+  .topic-item a {
+    text-decoration: none;
+    color: #28a745;
+  }
+  
+  .topic-item a:hover {
+    text-decoration: underline;
+  }

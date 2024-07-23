@@ -1,40 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-import { uploadQuizData } from '../utils/uploadQuizData';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import TopicList from './components/TopicList';
+import Quiz from './components/Quiz';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
+import Home from './components/Home';
 
-function AdminPage() {
-  const handleUpload = async () => {
-    await uploadQuizData();
-    alert('Quiz data uploaded successfully!');
-  };
 
-  return (
-    <div>
-      <h1>Admin Panel</h1>
-      <button onClick={handleUpload}>Upload Quiz Data</button>
-    </div>
-  );
-}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li><Link to="/home">Home</Link></li>
+            <li><Link to="/topics">Topics</Link></li>
+            <li><Link to="/signup">Sign Up</Link></li>
+            <li><Link to="/signin">Sign In</Link></li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/topics" element={<TopicList />} />
+          <Route path="/quiz/:unitId" element={<Quiz />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
+
+// function Home() {
+//   return <h2>Welcome to ICT Quiz App!</h2>;
+// }
 
 export default App;
