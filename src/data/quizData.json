@@ -1,289 +1,174 @@
-
 {
   "topics": [
-    {
-      "name": "Overview Of A Computer System",
-      "description": "Learn the fundamentals of computers",
-      "units": [
-        {
-          "name": "Computer Basics",
-          "description": "Introduction to computer hardware and software",
-          "questions": [
-            {
-              "type": "multiple-choice",
-              "question": "What is the name of an electronic tool that facilitates the input, processing, and output of information?",
-              "options": [
-                "Operating system",
-                "Motherboard",
-                "Computer"
-              ],
-              "correctAnswer": "Computer"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "What is the term for a small picture that represents a folder, program, or other items on a computer?",
-              "options": [
-                "Desktop",
-                "Icon",
-                "Graphic"
-              ],
-              "correctAnswer": "Icon"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "What is the part of a computer that allows a user to input information?",
-              "options": [
-                "Input Device",
-                "Output Device",
-                "Operating System"
-              ],
-              "correctAnswer": "Input Device"
-            },
-            {
-              "type": "true-false",
-              "question": "The CPU is the brain of the computer.",
-              "correctAnswer": "True"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "What is the computer's short-term memory that is lost when the computer is turned off?",
-              "options": [
-                "CPU",
-                "Hardware",
-                "RAM"
-              ],
-              "correctAnswer": "RAM"
-            },
-            {
-              "type": "fill-in-the-blank",
-              "question": "The __________ connects all other computer components, enabling them to communicate and work together.",
-              "correctAnswer": "Motherboard"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "What term is used to describe the physical components of a computer?",
-              "options": [
-                "Hardware",
-                "Hard Drive",
-                "Physical ware"
-              ],
-              "correctAnswer": "Hardware"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "What are the parts of a computer called that allow the user to see or hear information produced by the computer?",
-              "options": [
-                "Software",
-                "Input Device",
-                "Output Device"
-              ],
-              "correctAnswer": "Output Device"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "What is the computer part called that stores programs and information on two or more disks within the computer?",
-              "options": [
-                "Motherboard",
-                "Hard Drive",
-                "CPU"
-              ],
-              "correctAnswer": "Hard Drive"
-            },
-            {
-              "type": "true-false",
-              "question": "A disk drive is the computer part that reads information from a disk.",
-              "correctAnswer": "True"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "What is another term for computer programs?",
-              "options": [
-                "Software",
-                "RAM",
-                "Input Devices"
-              ],
-              "correctAnswer": "Software"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "What is the name of the program that controls a computer's basic functions?",
-              "options": [
-                "Hard Drive",
-                "Motherboard",
-                "Operating System"
-              ],
-              "correctAnswer": "Operating System"
-            },
-            {
-              "type": "fill-in-the-blank",
-              "question": "A binary number is made up of ______ and 1.",
-              "correctAnswer": "0"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "Which of the following language does the computer understand?",
-              "options": [
-                "C Language",
-                "Assembly Language",
-                "Binary Language"
-              ],
-              "correctAnswer": "Binary Language"
-            },
-            {
-              "type": "true-false",
-              "question": "Machine language is written in binary codes only.",
-              "correctAnswer": "True"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "Which of the following is not a characteristic of a computer?",
-              "options": [
-                "Versatility",
-                "Accuracy",
-                "I.Q."
-              ],
-              "correctAnswer": "I.Q."
-            },
-            {
-              "type": "multiple-choice",
-              "question": "Which of the following is the smallest unit of data in a computer?",
-              "options": [
-                "Bit",
-                "KB",
-                "Nibble"
-              ],
-              "correctAnswer": "Bit"
-            },
-            {
-              "type": "true-false",
-              "question": "ASCII is a type of computer code.",
-              "correctAnswer": "True"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "Which of the following is designed to control the operations of a computer?",
-              "options": [
-                "User",
-                "Application Software",
-                "System Software"
-              ],
-              "correctAnswer": "System Software"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "Which of the following device uses positional notation to represent a decimal number?",
-              "options": [
-                "Pascaline",
-                "Abacus",
-                "Computer"
-              ],
-              "correctAnswer": "Abacus"
-            }
+      {
+          "name": "Overview Of A Computer System",
+          "description": "Basic concepts of computer systems",
+          "units": [
+              {
+                  "name": "Computer Hardware",
+                  "description": "Basic components of a computer system",
+                  "questions": [
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is the name of an electronic tool that facilitates the input, processing, and output of information?",
+                          "options": ["Operating system", "Motherboard", "Computer"],
+                          "correctAnswer": "Computer"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is the term for a small picture that represents a folder, program, or other items on a computer?",
+                          "options": ["Desktop", "Icon", "Graphic"],
+                          "correctAnswer": "Icon"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is the part of a computer that allows a user to input information?",
+                          "options": ["Input Device", "Output Device", "Operating System"],
+                          "correctAnswer": "Input Device"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is referred to as the brain of the computer, responsible for calculations, movement, and processing of information?",
+                          "options": ["CPU", "RAM", "Motherboard"],
+                          "correctAnswer": "CPU"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is the name of the computer’s short-term memory that is lost when the computer is turned off?",
+                          "options": ["CPU", "Hardware", "RAM"],
+                          "correctAnswer": "RAM"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is the computer part that connects all other components, enabling them to communicate and work together?",
+                          "options": ["Operating System", "Disk Drive", "Motherboard"],
+                          "correctAnswer": "Motherboard"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What term is used to describe the physical components of a computer?",
+                          "options": ["Hardware", "Hard Drive", "Physical ware"],
+                          "correctAnswer": "Hardware"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What are the parts of a computer called that allow the user to see or hear information produced by the computer?",
+                          "options": ["Software", "Input Device", "Output Device"],
+                          "correctAnswer": "Output Device"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is the computer part called that stores programs and information on two or more disks within the computer?",
+                          "options": ["Motherboard", "Hard Drive", "CPU"],
+                          "correctAnswer": "Hard Drive"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is the name of the computer part that reads information from a disk?",
+                          "options": ["Disk System", "Motherboard", "Disk Drive"],
+                          "correctAnswer": "Disk Drive"
+                      },
+                      {
+                          "type": "true/false",
+                          "text": "A CPU is often referred to as the brain of the computer.",
+                          "correctAnswer": "True"
+                      },
+                      {
+                          "type": "fill-in-the-blank",
+                          "text": "The physical components of a computer are called __________.",
+                          "correctAnswer": "Hardware"
+                      },
+                      {
+                          "type": "fill-in-the-blank",
+                          "text": "The __________ is the part of the computer responsible for processing data.",
+                          "correctAnswer": "CPU"
+                      },
+                      {
+                          "type": "fill-in-the-blank",
+                          "text": "__________ memory is a type of computer memory that is volatile and loses its data when the power is turned off.",
+                          "correctAnswer": "RAM"
+                      }
+                  ]
+              },
+              {
+                  "name": "Computer Software",
+                  "description": "Different types of computer software",
+                  "questions": [
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is another term for computer programs?",
+                          "options": ["Software", "RAM", "Input Devices"],
+                          "correctAnswer": "Software"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "What is the name of the program that controls a computer’s basic functions?",
+                          "options": ["Hard Drive", "Motherboard", "Operating System"],
+                          "correctAnswer": "Operating System"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "Which of the following numbers is a binary number?",
+                          "options": ["1 and 2", "1 and 0.1", "0 and 1"],
+                          "correctAnswer": "0 and 1"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "Which of the following language does the computer understand?",
+                          "options": ["C Language", "Assembly Language", "Binary Language"],
+                          "correctAnswer": "Binary Language"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "Which of the following computer languages is written in binary codes only?",
+                          "options": ["English", "Machine Language", "C"],
+                          "correctAnswer": "Machine Language"
+                      }
+                  ]
+              }
           ]
-        }
-      ]
-    },
-    {
-      "name": "History of Computer",
-      "description": "Learn about the history and evolution of computers",
-      "units": [
-        {
-          "name": "Historical Milestones",
-          "description": "Key events in computer history",
-          "questions": [
-            {
-              "type": "multiple-choice",
-              "question": "Who is the father of Computers?",
-              "options": [
-                "James Gosling",
-                "Charles Babbage",
-                "Dennis Ritchie"
-              ],
-              "correctAnswer": "Charles Babbage"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "Which is an example of first generation computer?",
-              "options": [
-                "EDVAC",
-                "EDSAC",
-                "ENIAC"
-              ],
-              "correctAnswer": "ENIAC"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "How many major companies around the world manufacture microprocessors?",
-              "options": [
-                "Only one company",
-                "Two companies",
-                "Three companies"
-              ],
-              "correctAnswer": "Two companies"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "Operating system is used in which generation of computer for the first time?",
-              "options": [
-                "First Generation",
-                "Second Generation",
-                "Third Generation"
-              ],
-              "correctAnswer": "Third Generation"
-            },
-            {
-              "type": "fill-in-the-blank",
-              "question": "Pascaline was invented in the year ________.",
-              "correctAnswer": "1642"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "Which of the following is the first computer to use Stored Program Concept?",
-              "options": [
-                "UNIVAC",
-                "ENIAC",
-                "EDSAC"
-              ],
-              "correctAnswer": "EDSAC"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "What is the date when Babbage conceived Analytical engine?",
-              "options": [
-                "1642",
-                "1837",
-                "1880"
-              ],
-              "correctAnswer": "1837"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "When was vacuum tube invented?",
-              "options": [
-                "1900",
-                "1906",
-                "1910"
-              ],
-              "correctAnswer": "1906"
-            },
-            {
-              "type": "true-false",
-              "question": "The first computer introduced in Nepal was IBM 1401.",
-              "correctAnswer": "True"
-            },
-            {
-              "type": "multiple-choice",
-              "question": "Which was the most popular first generation computer?",
-              "options": [
-                "IBM 1650",
-                "IBM 360",
-                "IBM 1130"
-              ],
-              "correctAnswer": "IBM 1650"
-            }
+      },
+      {
+          "name": "History of Computers",
+          "description": "Evolution and development of computers",
+          "units": [
+              {
+                  "name": "Generations of Computers",
+                  "description": "Different generations of computers",
+                  "questions": [
+                      {
+                          "type": "multiple-choice",
+                          "text": "Who is the father of Computers?",
+                          "options": ["James Gosling", "Charles Babbage", "Dennis Ritchie"],
+                          "correctAnswer": "Charles Babbage"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "Which is an example of a first generation computer?",
+                          "options": ["EDVAC", "EDSAC", "ENIAC"],
+                          "correctAnswer": "ENIAC"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "How many major companies around the world manufacture microprocessors?",
+                          "options": ["Only one company", "Two companies", "Three companies"],
+                          "correctAnswer": "Two companies"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "Operating system is used in which generation of computer for the first time?",
+                          "options": ["First Generation", "Second Generation", "Third Generation"],
+                          "correctAnswer": "Third Generation"
+                      },
+                      {
+                          "type": "multiple-choice",
+                          "text": "From which generation operating systems were developed?",
+                          "options": ["First", "Second", "Third"],
+                          "correctAnswer": "Third"
+                      }
+                  ]
+              }
           ]
-        }
-      ]
-    }
+      }
   ]
 }

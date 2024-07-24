@@ -1,50 +1,23 @@
-import React, { useState } from 'react';
-import { signIn, signInWithGoogle } from '../services/authServices';
+import React from 'react';
+import { signInWithGoogle } from '../services/authServices';
+// import {useHistory, } from 'react-router-dom';
 
 function SignIn() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // const history = useHistory();
 
-  const handleSignIn = async (e) => {
-    e.preventDefault();
-    try {
-      await signIn(email, password);
-      alert('Sign in successful!');
-    } catch (error) {
-      alert('Error signing in: ' + error.message);
-    }
-  };
-
-  const handleGoogleSignIn = async () => {
+  const handleSignIn = async () => {
     try {
       await signInWithGoogle();
-      alert('Google sign in successful!');
+      // history.push('/profile');
     } catch (error) {
-      alert('Error signing in with Google: ' + error.message);
+      console.error('Error signing in:', error);
     }
   };
 
   return (
     <div>
       <h2>Sign In</h2>
-      <form onSubmit={handleSignIn}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          required
-        />
-        <button type="submit">Sign In</button>
-      </form>
-      <button onClick={handleGoogleSignIn}>Sign In with Google</button>
+      <button onClick={handleSignIn}>Sign in with Google</button>
     </div>
   );
 }

@@ -1,61 +1,65 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getQuestionsForUnit } from '../services/quizService';
+import { getCurrentUser } from '../services/authServices';
 import { updateProgress } from '../services/progressService';
 
-
 function Quiz() {
-  const { unitId } = useParams();
+  const { topicId, unitId } = useParams();
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [userId, setUserId] = useState(null);
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      try {
-        const fetchedQuestions = await getQuestionsForUnit(unitId);
-        setQuestions(fetchedQuestions);
-      } catch (error) {
-        console.error('Error fetching questions:', error);
-      }
+      const fetchedQuestions = await getQuestionsForUnit(unitId);
+      setQuestions(fetchedQuestions);
     };
+
     fetchQuestions();
   }, [unitId]);
 
+  useEffect(() => {
+    const user = getCurrentUser(); // Get the current user from authServices
+    if (user) {
+      setUserId(user.uid);
+    }
+  }, []);
 
-  const handleAnswer = (answer) => {
-    if (answer === questions[currentQuestionIndex].correctAnswer) {
+  const handleAnswer = (answerIndex) => {
+    if (answerIndex === questions[currentQuestionIndex].correctAnswerIndex) {
       setScore(score + 1);
     }
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      finishQuiz();
+      // Quiz completed, update progress
+      updateProgress(userId, topicId, unitId, score);
     }
   };
 
-  const finishQuiz = async () => {
-    // For now, we'll just alert the score
-    // In a real app, we'd use the actual user ID and topic ID
-    alert(`Quiz finished! Your score: ${score}/${questions.length}`);
-    // await updateProgress('userId', 'topicId', unitId, score);
-  };
-
-  if (questions.length === 0) return <div>Loading...</div>;
-
-  const currentQuestion = questions[currentQuestionIndex];
-
   return (
-    <div>
-      <h2>Quiz</h2>
-      <h3>Question {currentQuestionIndex + 1}</h3>
-      <p>{currentQuestion.question}</p>
-      {currentQuestion.options.map((option, index) => (
-        <button key={index} onClick={() => handleAnswer(option)}>
-          {option}
-        </button>
-      ))}
+    <div className="quiz">
+      <h2>Quiz for {unitId}</h2>
+      {currentQuestionIndex < questions.length ? (
+        <div>
+          <h3>{questions[currentQuestionIndex].questionText}</h3>
+          <ul>
+            {questions[currentQuestionIndex].answerOptions.map((option, index) => (
+              <li key={index}>
+                <button onClick={() => handleAnswer(index)}>{option}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <div>
+          <h3>Quiz Completed!</h3>
+          <p>Your score: {score}/{questions.length}</p>
+        </div>
+      )}
     </div>
   );
 }
